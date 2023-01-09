@@ -1,0 +1,13 @@
+package ger.pessoa.api.pessoa;
+
+import java.util.List;
+
+public class Pessoa {
+
+	private Long id;
+	private String nome;
+	private String dataNascimento;
+	private List<RecordEndereco> endereco;
+	
+	
+}

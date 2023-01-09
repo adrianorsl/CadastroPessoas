@@ -1,0 +1,39 @@
+package ger.pessoa.api.pessoa;
+
+import java.util.List;
+
+import jakarta.persistence.ElementCollection;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+import lombok.AllArgsConstructor;
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+
+@Table(name = "pessoas")
+@Entity(name = "Pessoa")
+@Getter
+@NoArgsConstructor
+@AllArgsConstructor
+@EqualsAndHashCode(of = "id")
+public class Pessoa {
+
+	public Pessoa(DadosCadastroPessoa dado) {
+		this.nome = dado.nome();
+		this.dataNascimento = dado.dataNascimento();
+		this.endereco = (List<Endereco>) new Endereco(dado.endereco());
+	}
+
+	@Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id;
+	private String nome;
+	private String dataNascimento;
+	
+	@ElementCollection  
+	private List<Endereco> endereco;
+	
+	
+}

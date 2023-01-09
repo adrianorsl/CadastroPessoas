@@ -1,0 +1,16 @@
+package ger.pessoa.api.controller;
+
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+@RequestMapping("pessoas")
+public class PessoaController {
+
+	
+	@PostMapping
+	public void cadastrar(@RquestBody String json) {
+		System.out.println(json);
+	}
+}

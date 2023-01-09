@@ -1,0 +1,5 @@
+package ger.pessoa.api.pessoa;
+
+public class Endereco {
+
+}

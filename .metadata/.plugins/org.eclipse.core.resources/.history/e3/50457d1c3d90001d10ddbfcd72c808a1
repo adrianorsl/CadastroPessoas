@@ -1,0 +1,5 @@
+package ger.pessoa.api.pessoa;
+
+public record RecorEndereco(String logradouro, String cep, String numero, String cidade, Principal principal) {
+
+}

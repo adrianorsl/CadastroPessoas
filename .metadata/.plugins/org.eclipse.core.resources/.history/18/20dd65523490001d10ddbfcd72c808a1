@@ -1,0 +1,5 @@
+package ger.pessoa.api.controller;
+
+public class Pessoa {
+
+}
